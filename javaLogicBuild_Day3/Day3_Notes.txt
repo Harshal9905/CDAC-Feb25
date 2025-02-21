@@ -1,0 +1,113 @@
+class ForDemo{
+	public static void main(System.in){
+
+		//will run in infinite
+		for(int a =10; ; a--){
+			SYstem.out.println(a);
+		}
+		
+		//will run in infinite
+		for(int a =10;a<5 ; ){
+			SYstem.out.println(a);
+		}
+
+		//will run but a should declare out for compulsary ** main thing in java no default value for variable
+		int a = 10;
+		for(;a<5 ;a-- ){
+			SYstem.out.println(a);
+		}
+
+		
+	}
+}
+
+
+
+//will run but a should declare out for compulsary ** main thing in java no default value for variable
+		int a = 10;
+		for(SYstem.out.println("helloo");a<5 ;a-- ){
+			SYstem.out.println(a);
+		}
+
+Output 
+
+helloo
+10
+9
+8
+7
+6
+5
+
+
+//will run but a should declare out for compulsary ** main
+ thing in java no default value for variable
+
+		int a = 10;
+		for(;a<5 ;SYstem.out.println("helloo") ){
+			SYstem.out.println(a);
+			a--;
+		}
+
+Output 
+
+
+10
+helloo
+9
+helloo
+8
+helloo
+7
+helloo
+6
+helloo
+5
+helloo
+
+
+//will run in infinite but if we write any state ment below this for loop then compiler will show error of state will not reach because compiler will think it is infintite for loop already.
+		for( ; ; ){
+			SYstem.out.println("a");
+		}
+		SYstem.out.print(); //here will be eror of code not reach
+
+
+
+
+
+//it will give error to give condition because condition is important.
+while(){
+	System.out.print();
+}
+
+
+
+//can not give 1 or 0 in condition. because it will take only boolean
+while(1){
+	System.out.print();
+}
+while(0){
+	System.out.print();
+}
+
+//when we give true in condition then it will run infinite 
+and also give error unreachable statement to a statement below while loop
+
+int a =10;
+while(true){
+	System.out.print(a);
+	a++
+}
+System.out.print();//will give error 
+
+
+//when we give true in condition then it will run infinite 
+and also not give error unreachable statement to a statement below while loop
+
+int a =10;
+while(a>1){
+	System.out.print(a);
+	a++
+}
+System.out.print();// will not give error but it will not run
