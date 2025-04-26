@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(black, rgb(113, 53, 53), red); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+    width: 400px;
+}
+
+h2 {
+    margin-bottom: 30px; 
+    text-align: center;
+    font-size: 24px; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px; 
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px; 
+    margin: 50px, auto; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; 
+}
+
+
+.radio-group {
+    margin-bottom: 15px; 
+}
+
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff; 
+    border-radius: 50%; 
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #007bff; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px; 
+}
+
+button {
+    width: 100%;
+    padding: 12px; 
+    background-color: brown; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; 
+}
+
+button:hover {
+    
+    background: white;
+    border-style: solid;
+    color: red;
+}
+
+#otpSection {
+    margin-top: 30px; 
+    text-align: center;
+}
+
+#otpSection input[type="text"] {
+    width: 180px;
+    margin-right: 15px; 
+    padding: 8px; 
+    font-size: 14px; 
+}
+
+#otpSection button {
+    padding: 10px; 
+    font-size: 14px; 
+}
