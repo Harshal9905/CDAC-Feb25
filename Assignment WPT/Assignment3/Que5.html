@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function fetchData(url, callback) {
+            console.log(`Fetching data from ${url}...`);
+
+            setTimeout(function () {
+                const hasError = Math.random() < 0.3; // 30% chance of error
+
+                if (hasError) {
+                     callback("Error: Failed to fetch data from " + url, null);
+                } else {
+                    const response = `Response from ${url}`;
+                    callback(null, response);
+                }
+            }, 2000);
+        }
+
+
+        function processData(data, callback) {
+        setTimeout(function () {
+            const processed = `Processed Data: ${data.toUpperCase()}`;
+            callback(processed);
+        }, 1000);
+        }
+
+
+        fetchData("https://example.com/api/data", function (error, response) {
+        if (error) {
+            console.error("Fetch Error:", error);
+        } else {
+            console.log("Fetch Success:", response);
+            processData(response, function (processedResult) {
+            console.log("Processing Complete:", processedResult);
+            });
+        }
+        });
+
+    </script>
+</body>
+</html>
